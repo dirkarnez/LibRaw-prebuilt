@@ -44,7 +44,8 @@ jobs:
             cd LibRaw && 
             g++ --version && 
             autoreconf -i -f -v &&
-            ./configure -static --prefix="$(pwd)/${{ env.installationPath }}" &&
+            ./configure --help &&
+            ./configure --prefix="$(pwd)/${{ env.installationPath }}" &&
             mingw32-make.exe install
             
       - name: Archive Release
